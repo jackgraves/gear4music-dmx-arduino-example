@@ -1,13 +1,14 @@
 ## Gear4Music Galaxy-72 Arduino DMX Example
 
-This repository contains an example of how you can control the 'Galaxy-72' LED Strip that Gear4Music offer ([available here](https://www.gear4music.com/PA-DJ-and-Lighting/Galaxy-72W-LED-Wall-Wash-by-Gear4music/2IFB)).
+This repository contains an example of how you can control the 'Galaxy-72' LED Strip that Gear4Music offer.
+
+I bought mine ([here](https://www.gear4music.com/PA-DJ-and-Lighting/Galaxy-72W-LED-Wall-Wash-by-Gear4music/2IFB)).
 
 The Galaxy-72 LED Strip contains 24 RGB LEDs, which can be addressed in sets of 3 ( 8 Addresses * 3 LEDs = 24 Total LEDs).
 
 Using [DMX](https://en.wikipedia.org/wiki/DMX512), you can control these lights.
 
 ![image](https://user-images.githubusercontent.com/12021631/123093068-1a975000-d423-11eb-9afb-cea57e4e0a39.png)
-
 
 ### Requirements
 
@@ -48,3 +49,27 @@ At this point, you should have your Arduino with DMX Shield plugged into your co
 4. Move the `NOT EN` header to the `EN` position
 5. You should see the Galaxy-72 display flashing and the lights should operate
 5. Whenever you need to re-upload the code, make sure you put the `EN` pin back into the right slot
+
+### What does the example do?
+
+The example script controls 2 devices and makes them perform a mirrored sequence.
+
+e.g.
+
+```
+Time | Left Device | Right Device
+1 [x][ ][ ][ ][ ][ ][ ][ ] | [ ][ ][ ][ ][ ][ ][ ][x]
+2 [ ][x][ ][ ][ ][ ][ ][ ] | [ ][ ][ ][ ][ ][ ][x][ ]
+3 [ ][ ][x][ ][ ][ ][ ][ ] | [ ][ ][ ][ ][ ][x][ ][ ]
+4 [ ][ ][ ][x][ ][ ][ ][ ] | [ ][ ][ ][ ][x][ ][ ][ ]
+5 [ ][ ][ ][ ][x][ ][ ][ ] | [ ][ ][ ][x][ ][ ][ ][ ]
+6 [ ][ ][ ][ ][ ][x][ ][ ] | [ ][ ][x][ ][ ][ ][ ][ ]
+7 [ ][ ][ ][ ][ ][ ][x][ ] | [ ][x][ ][ ][ ][ ][ ][ ]
+8 [ ][ ][ ][ ][ ][ ][ ][x] | [x][ ][ ][ ][ ][ ][ ][ ]
+```
+
+It is contained in a loop that will also reverse the pattern so that it looks smoother on the devices.
+
+### License
+
+This repository is fully open-source, do what you want with it 😎!
