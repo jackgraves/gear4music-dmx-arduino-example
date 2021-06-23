@@ -6,6 +6,9 @@ The Galaxy-72 LED Strip contains 24 RGB LEDs, which can be addressed in sets of 
 
 Using [DMX](https://en.wikipedia.org/wiki/DMX512), you can control these lights.
 
+![image](https://user-images.githubusercontent.com/12021631/123093068-1a975000-d423-11eb-9afb-cea57e4e0a39.png)
+
+
 ### Requirements
 
 * 1+ Galaxy-72 LED Strips (I'm using 2)
