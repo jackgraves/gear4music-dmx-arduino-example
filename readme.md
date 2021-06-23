@@ -10,6 +10,22 @@ Using [DMX](https://en.wikipedia.org/wiki/DMX512), you can control these lights.
 
 ![image](https://user-images.githubusercontent.com/12021631/123093068-1a975000-d423-11eb-9afb-cea57e4e0a39.png)
 
+### Background
+
+I recently bought a pair of LED Strips in order to learn how the DMX Standard works.
+
+The idea behind DMX is that it provides a standard protocol (earlier attempts were all proprietary) for controlling lights and other stage equipment, such as:
+
+* Lights and Strobes
+* Lasers and Gobos
+* Smoke/Fog Machines
+
+It provides 512 Channels, which would have been a large number when the standard was produced, as there were a low number of channels per device, but modern devices like these LED Strips use a lot more - in this case 50 Channels are used by each light. Therefore, this solution only works for a small number of devices (up to 10), and then you have to involve other methods for scaling your setup - but in this case, for home use it's fine.
+
+If you don't want to use an Arduino and money is no object, you should look at Lighting Desks, which provide a hardware solution to controlling your lights.
+
+I am hoping to write a program for the Arduino that can listen to an audio input and make the lights respond accordingly (sound-to-light), in a symettrical way - this project an important first step to validate my logic.
+
 ### Requirements
 
 * 1+ Galaxy-72 LED Strips (I'm using 2)
